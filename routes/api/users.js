@@ -17,7 +17,7 @@ router.get('/', function(req, res){
 router.get('/view/:userId', function(req,res){
   var userId = req.params.userId;
 
-  User.find({'_id':userId}, function(err, user){
+  User.findOne({'_id':userId}, function(err, user){
 
     if(err){
       return res.json({'success':false, 'error': err});
@@ -31,7 +31,7 @@ router.get('/view/:userId', function(req,res){
 
 
 router.post('/create', function(req, res) {
-
+console.log(req.body)
   User.create(new User({
     username: req.body.username,
     email: req.body.email,
