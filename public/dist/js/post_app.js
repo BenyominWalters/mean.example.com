@@ -1,5 +1,5 @@
 function viewIndex(){
-  var url = '/api/posts';
+  var url = 'https://benyominwalters.com/api/posts';
 
   var xhr = new XMLHttpRequest();
   xhr.open('GET', url);
